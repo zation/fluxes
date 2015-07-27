@@ -10,10 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/zation/fluxes.git"
   },
-  "author": "",
+  "author": "Zation <zation1@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zation/fluxes/issues"
   },
-  "homepage": "https://github.com/zation/fluxes#readme"
+  "homepage": "https://github.com/zation/fluxes#readme",
+  "dependencies": {
+    "director": "^1.2.8",
+    "react": "^0.13.3",
+    "reflux": "^0.2.11"
+  }
 }

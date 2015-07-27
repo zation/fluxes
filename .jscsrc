@@ -1,3 +1,6 @@
 {
-  "node-style-guide": "airbnb"
+  "preset": "airbnb",
+  "excludeFiles": [
+    "./node_modules/**"
+  ]
 }
