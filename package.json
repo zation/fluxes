@@ -15,6 +15,11 @@
   "bugs": {
     "url": "https://github.com/zation/fluxes/issues"
   },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "homepage": "https://github.com/zation/fluxes#readme",
   "dependencies": {
     "director": "^1.2.8",
