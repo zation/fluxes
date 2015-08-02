@@ -1,7 +1,6 @@
 var React = require('react');
 var Reflux = require('reflux');
 var _ = require('lodash');
-var PropTypes = require('react/lib/ReactPropTypes');
 
 var RoutesStore = require('../stores/routes');
 var RoutesAction = require('../actions/routes');
