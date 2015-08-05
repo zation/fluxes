@@ -19,6 +19,7 @@ module.exports = React.createClass({
 
   componentWillUnmount: function() {
     $(this.getDOMNode()).off('hidden.bs.modal');
+    $(this.getDOMNode()).off('show.bs.modal');
   },
 
   open: function() {
