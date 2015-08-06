@@ -1,5 +1,6 @@
 var React = require('react');
 var $ = global.jQuery;
+var classnames = require('classnames');
 
 require('bootstrap-styl/js/modal');
 
@@ -31,16 +32,13 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var dialogClass = 'modal-dialog';
-    if (this.props.size === 'large') {
-      dialogClass += ' modal-lg';
-    } else if (this.props.size === 'small') {
-      dialogClass += ' modal-sm';
-    }
-
+    var size = this.props.size;
     return (
       <div className={'modal fade ' + (this.props.className || '')}>
-        <div className={dialogClass}>
+        <div className={classnames('modal-dialog', {
+          'modal-lg': size === 'large',
+          'modal-sm': size === 'sm'
+        })}>
           <div className="modal-content">
             <div className="modal-header">
               <button type="button" className="close" data-dismiss="modal">

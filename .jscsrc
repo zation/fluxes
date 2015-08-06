@@ -1,5 +1,8 @@
 {
   "preset": "airbnb",
+  "requireDotNotation": {
+    "allExcept": "keywords"
+  },
   "excludeFiles": [
     "./node_modules/**"
   ]
