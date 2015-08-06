@@ -6,6 +6,10 @@ var ConfirmationStore = require('../stores/confirmation');
 var Modal = require('./modal.jsx');
 
 module.exports = React.createClass({
+  propTypes: {
+    title: React.PropTypes.string
+  },
+
   mixins: [Reflux.listenTo(ConfirmationStore, 'onAsk')],
 
   getInitialState: function() {

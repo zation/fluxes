@@ -3,6 +3,17 @@ var Ladda = require('ladda');
 var classnames = require('classnames');
 
 module.exports = React.createClass({
+  propTypes: {
+    type: React.PropTypes.oneOf(['button', 'reset', 'submit']),
+    animation: React.PropTypes.oneOf([
+      'expand-left', 'expand-right', 'expand-up', 'expand-down',
+      'contract', 'contract-overlay', 'zoom-in', 'zoom-out',
+      'slide-left', 'slide-right', 'slide-up', 'slide-down'
+    ]),
+    onClick: React.PropTypes.func.required,
+    className: React.PropTypes.string
+  },
+
   componentDidMount: function() {
     this._ladda = Ladda.create(this.getDOMNode());
     this.originalClick = this.props.onClick;
