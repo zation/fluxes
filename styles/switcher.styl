@@ -37,8 +37,12 @@ $flat-border-width = 2px
 
 input.switcher-round
   &:checked + label
+    &.equal:before
+      background-color: #F1F1F1
+
     &:before
       background-color: $switcher-color
+
     &:after
       margin-left: $switcher-radius
 
@@ -62,12 +66,17 @@ input.switcher-round
 input.switcher-flat
   &:checked + label
     background-color: $switcher-color
+
     &:after
       margin-left: $switcher-radius
       background-color: $switcher-color
 
   & + label
     transition: background 0.4s
+
+    &.equal,
+    &.equal:after
+      background-color: $switcher-color
 
     &:before
       top: $flat-border-width

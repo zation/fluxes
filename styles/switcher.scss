@@ -42,6 +42,10 @@ $flat-border-width: 2px !default;
 
 input.switcher-round {
   &:checked + label {
+    &.equal:before {
+      background-color: #F1F1F1;
+    }
+
     &:before {
       background-color: $switcher-color;
     }
@@ -86,6 +90,11 @@ input.switcher-flat {
 
   & + label {
     transition: background 0.4s;
+
+    &.equal,
+    &.equal:after {
+      background-color: $switcher-color;
+    }
 
     &:before {
       top: $flat-border-width;

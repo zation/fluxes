@@ -5,7 +5,8 @@ var classnames = require('classnames');
 module.exports = React.createClass({
   propTypes: {
     className: React.PropTypes.string,
-    type: React.PropTypes.oneOf(['round', 'flat'])
+    type: React.PropTypes.oneOf(['round', 'flat']),
+    equal: React.PropTypes.bool
   },
 
   render: function() {
@@ -17,7 +18,7 @@ module.exports = React.createClass({
         'switcher',
         this.props.type === 'flat' ? 'switcher-flat' : 'switcher-round'
       )}/>
-        <label htmlFor={id}></label>
+        <label htmlFor={id} className={classnames({equal: this.props.equal})}></label>
       </span>
     );
   }
