@@ -1,0 +1,85 @@
+$switcher-color ?= $brand-primary
+$switcher-radius ?= 36px
+$switcher-width ?= 72px
+
+$round-border-width = 1px
+$flat-border-width = 2px
+
+.switcher
+  position: absolute
+  margin-left: -9999px
+  visibility: hidden
+
+  & + label
+    position: relative
+    cursor: pointer
+    width: $switcher-width
+    height: $switcher-radius
+    background-color: #DDD
+    border-radius: $switcher-radius
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    &:before
+      border-radius: $switcher-radius
+      transition: background 0.4s
+
+    &:after
+      border-radius: 100%
+
+    &:before,
+    &:after
+      display: block
+      position: absolute
+      content: ""
+
+input.switcher-round
+  &:checked + label
+    &:before
+      background-color: $switcher-color
+    &:after
+      margin-left: $switcher-radius
+
+  & + label
+    &:before,
+    &:after
+      top: $round-border-width
+      left: $round-border-width
+      bottom: $round-border-width
+
+    &:before
+      right: $round-border-width
+      background-color: #F1F1F1
+
+    &:after
+      width: $switcher-radius - $round-border-width * 2
+      background-color: white
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+      transition: margin 0.4s
+
+input.switcher-flat
+  &:checked + label
+    background-color: $switcher-color
+    &:after
+      margin-left: $switcher-radius
+      background-color: $switcher-color
+
+  & + label
+    transition: background 0.4s
+
+    &:before
+      top: $flat-border-width
+      left: $flat-border-width
+      bottom: $flat-border-width
+      right: $flat-border-width
+      background-color: white
+
+    &:after
+      top: $flat-border-width * 2
+      left: $flat-border-width * 2
+      bottom: $flat-border-width * 2
+      width: $switcher-radius - $flat-border-width * 4
+      background-color: #DDD
+      transition: margin 0.4s, background 0.4s
