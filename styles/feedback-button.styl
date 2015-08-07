@@ -9,30 +9,6 @@
  * CONFIG
  */
 $spinnerSize = 32px
-/*************************************
- * MIXINS
- */
-transition($value)
-  -webkit-transition: $value !important
-  // important to override bootstrap
-  -moz-transition: $value !important
-  -ms-transition: $value !important
-  -o-transition: $value !important
-  transition: $value !important
-
-transform($value)
-  -webkit-transform: $value
-  -moz-transform: $value
-  -ms-transform: $value
-  -o-transform: $value
-  transform: $value
-
-transform-origin($value)
-  -webkit-transform-origin: $value
-  -moz-transform-origin: $value
-  -ms-transform-origin: $value
-  -o-transform-origin: $value
-  transform-origin: $value
 
 /*************************************
  * BUTTON BASE
@@ -67,7 +43,7 @@ transform-origin($value)
   background: rgba(0, 0, 0, 0.2)
   visibility: hidden
   opacity: 0
-  transition(0.1s linear all)
+  transition: 0.1s linear all
 
 .ladda-button[data-loading] .ladda-progress
   opacity: 1
@@ -79,7 +55,7 @@ transform-origin($value)
 .ladda-button,
 .ladda-button .ladda-spinner,
 .ladda-button .ladda-label
-  transition(0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all)
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all
 
 .ladda-button[data-style=zoom-in],
 .ladda-button[data-style=zoom-in] .ladda-spinner,
@@ -87,7 +63,7 @@ transform-origin($value)
 .ladda-button[data-style=zoom-out],
 .ladda-button[data-style=zoom-out] .ladda-spinner,
 .ladda-button[data-style=zoom-out] .ladda-label
-  transition(0.3s ease all)
+  transition: 0.3s ease all
 
 /*************************************
  * EXPAND LEFT
@@ -256,7 +232,7 @@ transform-origin($value)
 .ladda-button[data-style=zoom-out] .ladda-spinner
   left: 50%
   margin-left: $spinnerSize
-  transform(scale(2.5))
+  transform: scale(2.5)
 
 .ladda-button[data-style=zoom-out] .ladda-label
   position: relative
@@ -264,12 +240,12 @@ transform-origin($value)
 
 .ladda-button[data-style=zoom-out][data-loading] .ladda-label
   opacity: 0
-  transform(scale(0.5))
+  transform: scale(0.5)
 
 .ladda-button[data-style=zoom-out][data-loading] .ladda-spinner
   opacity: 1
   margin-left: 0
-  transform(none)
+  transform: none
 
 /*************************************
  * ZOOM-IN
@@ -280,7 +256,7 @@ transform-origin($value)
 .ladda-button[data-style=zoom-in] .ladda-spinner
   left: 50%
   margin-left: ($spinnerSize / -2)
-  transform(scale(0.2))
+  transform: scale(0.2)
 
 .ladda-button[data-style=zoom-in] .ladda-label
   position: relative
@@ -288,12 +264,12 @@ transform-origin($value)
 
 .ladda-button[data-style=zoom-in][data-loading] .ladda-label
   opacity: 0
-  transform(scale(2.2))
+  transform: scale(2.2)
 
 .ladda-button[data-style=zoom-in][data-loading] .ladda-spinner
   opacity: 1
   margin-left: 0
-  transform(none)
+  transform: none
 
 /*************************************
  * CONTRACT
