@@ -21,7 +21,7 @@ module.exports = {
   create: function(routes, options) {
     var originalOn = options && options.on;
     var on = [function() {
-      RoutesAction.navigateTo(router.getRoute().join('/'));
+      RoutesAction.navigateTo('/' + router.getRoute().join('/'));
     }];
     if (_.isFunction(originalOn)) {
       on.push(originalOn);
