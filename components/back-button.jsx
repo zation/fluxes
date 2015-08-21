@@ -1,9 +1,6 @@
 var React = require('react');
-var Reflux = require('reflux');
-var _ = require('lodash');
 
-var RoutesStore = require('../stores/routes');
-var RoutesAction = require('../actions/routes');
+var Router = require('../libs/router');
 var Link = require('./link.jsx');
 
 module.exports = React.createClass({
@@ -11,10 +8,8 @@ module.exports = React.createClass({
     className: React.PropTypes.string
   },
 
-  mixins: [Reflux.connect(RoutesStore, 'routes')],
-
   back: function() {
-    RoutesAction.back();
+    Router.back();
   },
 
   render: function() {
