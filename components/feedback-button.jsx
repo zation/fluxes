@@ -10,7 +10,7 @@ module.exports = React.createClass({
       'contract', 'contract-overlay', 'zoom-in', 'zoom-out',
       'slide-left', 'slide-right', 'slide-up', 'slide-down'
     ]),
-    onClick: React.PropTypes.func.required,
+    onClick: React.PropTypes.func.isRequired,
     className: React.PropTypes.string
   },
 
