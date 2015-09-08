@@ -29,7 +29,6 @@ module.exports = {
       on = on.concat(originalOn);
     }
     router = new Router(routes).configure(_.merge({}, options, {on: on}));
-    router.init('/');
     return router;
   }
 };
